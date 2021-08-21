@@ -32,7 +32,9 @@ const Todo = () => {
           />
           <i
             className="fa fa-plus add-btn"
-            onClick={() => dispatch(addtodo(inputData), setInputData(""))}
+            onClick={() => dispatch(addtodo(inputData), setInputData(""))
+            }
+            title="Add Note"
           ></i>
         </div>
       </div>
@@ -52,7 +54,7 @@ const Todo = () => {
               <tr>
                 <td key={elem.id}>{elem.data}</td>
                 <td>
-                  <i className="fa fa-minus-circle" onClick={()=>dispatch(deletetodo(elem.id))}></i>
+                  <i className="fa fa-minus-circle" onClick={()=>dispatch(deletetodo(elem.id))} title="Delete Note"></i>
                 </td>
                 
               </tr>
